@@ -10,8 +10,11 @@
                 class="bg-blue-700 hover:bg-blue-800 dark:hover:bg-blue-700 dark:bg-blue-600 px-4 py-2 rounded-lg focus:ring-4 font-medium text-white focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 text-center text-sm">
                 Contact</a>
 
-            <button data-collapse-toggle="navbar-cta" type="button"
-                class="inline-flex justify-center items-center md:hidden hover:bg-gray-100 dark:hover:bg-gray-700 p-2 rounded-lg focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-600 w-10 h-10 text-gray-500 text-sm focus:outline-none dark:text-gray-400"
+            <button (click)="togglemenu($event)" type="button"
+                class="inline-flex justify-center items-center md:hidden
+                 hover:bg-gray-100 dark:hover:bg-gray-700 p-2 rounded-lg focus:ring-2
+                  focus:ring-gray-200 dark:focus:ring-gray-600 w-10 h-10 text-gray-500 
+                  text-sm focus:outline-none dark:text-gray-400"
                 aria-controls="navbar-cta" aria-expanded="false">
                 <span class="sr-only">Open main menu</span>
                 <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -21,36 +24,37 @@
                 </svg>
             </button>
         </div>
-        <div class="md:flex justify-between items-center md:order-1 hidden w-full md:w-auto" id="navbar-cta">
+       
+        
+        <div class="w-full md:w-auto justify-between items-center md:order-1" id="navbar-cta" [ngClass]="{'hidden': !SmallNavbar,'lg:block':!SmallNavbar}">
             <ul
                 class="flex md:flex-row flex-col md:space-x-8 rtl:space-x-reverse border-gray-100 md:border-0 dark:border-gray-700 bg-gray-50 md:bg-white md:dark:bg-gray-900 dark:bg-gray-800 mt-4 md:mt-0 p-4 md:p-0 border rounded-lg font-medium">
                 <li>
-                    <a routerLink="/home" routerLinkActive="active"
+                    <a routerLink="/home" routerLinkActive="active" (click)="togglemenu($event)"
                         class="block dark:border-gray-700 md:hover:bg-transparent md:dark:hover:bg-transparent hover:bg-gray-100 dark:hover:bg-gray-700 px-3 py-2 md:p-0 rounded text-gray-900 dark:hover:text-white dark:text-white cursor-pointer"
                         aria-current="page">Home</a>
                 </li>
                 <li>
-                    <a routerLink="/about" routerLinkActive="active"
+                    <a routerLink="/about" routerLinkActive="active" (click)="togglemenu($event)"
                         class="block dark:border-gray-700 md:hover:bg-transparent md:dark:hover:bg-transparent hover:bg-gray-100 dark:hover:bg-gray-700 px-3 py-2 md:p-0 rounded text-gray-900 dark:hover:text-white dark:text-white cursor-pointer">About</a>
                 </li>
                 <li>
-                    <a routerLink="/services" routerLinkActive="active"
+                    <a routerLink="/services" routerLinkActive="active" (click)="togglemenu($event)"
                         class="block dark:border-gray-700 md:hover:bg-transparent md:dark:hover:bg-transparent hover:bg-gray-100 dark:hover:bg-gray-700 px-3 py-2 md:p-0 rounded text-gray-900 dark:hover:text-white dark:text-white cursor-pointer">Services</a>
                 </li>
                 <li>
-                    <a routerLink="/contact" routerLinkActive="active"
+                    <a routerLink="/contact" routerLinkActive="active" (click)="togglemenu($event)"
                         class="block dark:border-gray-700 md:hover:bg-transparent md:dark:hover:bg-transparent hover:bg-gray-100 dark:hover:bg-gray-700 px-3 py-2 md:p-0 rounded text-gray-900 dark:hover:text-white dark:text-white cursor-pointer">Contact</a>
                 </li>
 
                 <li>
-                    <button (click)="handleToggleChange($event)" class="rounded">
-                        
+                    <button (click)="handleToggleChange($event); togglemenu($event) " class="rounded lg:ms-0 lg:my-0 ms-5 my-3">
+
                         <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" 
-                            viewBox="0 0 24 24" [style.display]="!toggle ? 'block' : 'none'">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" 
-                            stroke-width="2"
-                            d="M12 5V3m0 18v-2M7.05 7.05 5.636 5.636m12.728 12.728L16.95 16.95M5 12H3m18 0h-2M7.05 16.95l-1.414 1.414M18.364 5.636 16.95 7.05M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z" />
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"
+                            [style.display]="!toggle ? 'block' : 'none'">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 5V3m0 18v-2M7.05 7.05 5.636 5.636m12.728 12.728L16.95 16.95M5 12H3m18 0h-2M7.05 16.95l-1.414 1.414M18.364 5.636 16.95 7.05M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z" />
                         </svg>
 
 
@@ -60,8 +64,6 @@
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M12 21a9 9 0 0 1-.5-17.986V3c-.354.966-.5 1.911-.5 3a9 9 0 0 0 9 9c.239 0 .254.018.488 0A9.004 9.004 0 0 1 12 21Z" />
                         </svg>
-
-
                     </button>
                 </li>
             </ul>

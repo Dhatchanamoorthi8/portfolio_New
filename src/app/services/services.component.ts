@@ -16,7 +16,7 @@ import { CommonModule } from '@angular/common';
       state('end', style({
         transform: 'translateY(-20px)'
       })),
-      transition('start <=> end', animate('1.5s ease-in-out')),
+      transition('start <=> end', animate('0.9s ease-in-out')),
     ])
   ]
 })
