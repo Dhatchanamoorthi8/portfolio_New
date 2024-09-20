@@ -1,0 +1,154 @@
+<div class="md:flex my-3">
+    <ul
+        class="flex-column space-y space-y-4 mb-4 md:mb-0 font-medium text-gray-500 text-sm dark:text-gray-400 md:me-4 ms-3">
+        <li>
+            <a (click)="pageChange('WebService')"
+                [classList]="currentPage==='WebService' ? 'inline-flex items-center px-4 py-3 rounded-lg w-full text-white active bg-blue-700 dark:bg-blue-600' 
+                :'inline-flex items-center px-4 py-3 rounded-lg w-full  bg-gray-50 hover:bg-gray-100 dark:hover:bg-gray-700 dark:bg-gray-800  hover:text-gray-900 dark:hover:text-white'"
+                aria-current="page">
+                <svg [classList]="currentPage==='WebService' ? 'w-6 h-6 text-white me-2' : 'w-6 h-6 text-gray-400 text-gray-500 me-2'"
+                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                    viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M6 8h.01M9 8h.01M12 8h.01M4 11h16M4 19h16a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z" />
+                </svg>
+                Web Application Service
+            </a>
+        </li>
+        <li>
+            <a (click)="pageChange('Mobile')"
+                [classList]="currentPage==='Mobile' ? 'inline-flex items-center px-4 py-3 rounded-lg w-full text-white active bg-blue-700 dark:bg-blue-600' 
+            :'inline-flex items-center px-4 py-3 rounded-lg w-full  bg-gray-50 hover:bg-gray-100 dark:hover:bg-gray-700 dark:bg-gray-800  hover:text-gray-900 dark:hover:text-white'"
+                aria-current="page">
+
+                <svg [classList]="currentPage==='Mobile' ? 'w-6 h-6 text-white me-2' : 'w-6 h-6 text-gray-400 text-gray-500 me-2'"
+                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                    viewBox="0 0 24 24">
+                    <path fill-rule="evenodd"
+                        d="M5 4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4Zm12 12V5H7v11h10Zm-5 1a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2H12Z"
+                        clip-rule="evenodd" />
+                </svg>
+                Mobile Application Service
+            </a>
+        </li>
+        <li>
+            <a (click)="pageChange('Admin')"
+                [classList]="currentPage==='Admin' ? 'inline-flex items-center px-4 py-3 rounded-lg w-full text-white active bg-blue-700 dark:bg-blue-600' 
+            :'inline-flex items-center px-4 py-3 rounded-lg w-full  bg-gray-50 hover:bg-gray-100 dark:hover:bg-gray-700 dark:bg-gray-800  hover:text-gray-900 dark:hover:text-white'"
+                aria-current="page">
+
+                <svg [classList]="currentPage==='Admin' ? 'w-6 h-6 text-white me-2' : 'w-6 h-6 text-gray-400 text-gray-500 me-2'"
+                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-width="2"
+                        d="M7 17v1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1a3 3 0 0 0-3-3h-4a3 3 0 0 0-3 3Zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                </svg>
+
+
+                Admin Application Design
+            </a>
+        </li>
+        <li>
+            <a (click)="pageChange('Web')"
+                [classList]="currentPage==='Web' ? 'inline-flex items-center px-4 py-3 rounded-lg w-full text-white active bg-blue-700 dark:bg-blue-600' 
+            :'inline-flex items-center px-4 py-3 rounded-lg w-full  bg-gray-50 hover:bg-gray-100 dark:hover:bg-gray-700 dark:bg-gray-800  hover:text-gray-900 dark:hover:text-white'"
+                aria-current="page">
+
+                <svg [classList]="currentPage==='Web' ? 'w-6 h-6 text-white me-2' : 'w-6 h-6 text-gray-400 text-gray-500 me-2'"
+                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                    <path
+                        d="M4.5 6a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1M6 6a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1m2-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0" />
+                    <path
+                        d="M12 1a2 2 0 0 1 2 2 2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2 2 2 0 0 1-2-2V3a2 2 0 0 1 2-2zM2 12V5a2 2 0 0 1 2-2h9a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1m1-4v5a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V8zm12-1V5a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v2z" />
+                </svg>
+
+                Web Development
+            </a>
+        </li>
+        <li>
+            <a (click)="pageChange('Software')"
+                [classList]="currentPage==='Software' ? 'inline-flex items-center px-4 py-3 rounded-lg w-full text-white active bg-blue-700 dark:bg-blue-600' 
+            :'inline-flex items-center px-4 py-3 rounded-lg w-full  bg-gray-50 hover:bg-gray-100 dark:hover:bg-gray-700 dark:bg-gray-800  hover:text-gray-900 dark:hover:text-white'"
+                aria-current="page">
+
+
+                <svg [classList]="currentPage==='Software' ? 'w-6 h-6 text-white me-2' : 'w-6 h-6 text-gray-400 text-gray-500 me-2'"
+                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m8 8-4 4 4 4m8 0 4-4-4-4m-2-3-4 14" />
+                </svg>
+                Software Support
+            </a>
+        </li>
+
+        <li>
+            <a (click)="pageChange('Customized')"
+                [classList]="currentPage==='Customized' ? 'inline-flex items-center px-4 py-3 rounded-lg w-full text-white active bg-blue-700 dark:bg-blue-600' 
+        :'inline-flex items-center px-4 py-3 rounded-lg w-full  bg-gray-50 hover:bg-gray-100 dark:hover:bg-gray-700 dark:bg-gray-800  hover:text-gray-900 dark:hover:text-white'"
+                aria-current="page">
+
+
+                <svg [classList]="currentPage==='Customized' ? 'w-8 h-8 text-white me-2' : 'w-8 h-8 text-gray-400 text-gray-500 me-2'"
+                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                    viewBox="0 0 24 24">
+                    <path fill-rule="evenodd"
+                        d="M3 4a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H3Zm4.293 5.707a1 1 0 0 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3a1 1 0 0 1-1.414-1.414L9.586 12 7.293 9.707ZM13 14a1 1 0 1 0 0 2h3a1 1 0 1 0 0-2h-3Z"
+                        clip-rule="evenodd" />
+                </svg>
+
+                Customized Software Development
+            </a>
+        </li>
+    </ul>
+    <div class="bg-gray-50 dark:bg-gray-800 lg:m-6 rounded-lg w-full text-gray-500 text-medium dark:text-gray-400">
+
+
+        <!-- <div *ngFor="let page of pagedatas" class="flex flex-wrap md:flex-nowrap gap-2 p-6 w-full"
+            [style.display]="page.show ? 'flex' : 'none'">
+            <img [src]="page.img" class="mb-2 w-auto h-72" alt="Service Logo" [@bounce]="bounceState"
+                (mouseover)="toggleBounce()" (mouseleave)="toggleBounce()" />
+
+            <p class="block mb-2 p-4 text-gray-500 text-justify dark:text-gray-400">
+                {{ page.content }}
+
+                <div *ngFor="let keyword of pagedatas">
+                    <span 
+                    class="bg-blue-100 dark:bg-blue-900 px-2.5 py-0.5 rounded-full font-medium text-blue-800 text-xs dark:text-blue-300 me-2">
+                    {{keyword.keyword[0]}}
+                   </span>
+                </div>
+
+            </p>
+
+
+        </div> -->
+
+
+        <div *ngFor="let page of pagedatas" class="flex flex-wrap md:flex-nowrap gap-2 p-6 w-full"
+            [style.display]="page.show ? 'flex' : 'none'">
+
+            <img [src]="page.img" class="mb-2 w-auto h-72" alt="Service Logo" [@bounce]="bounceState"
+                (mouseover)="toggleBounce()" (mouseleave)="toggleBounce()" />
+
+            <!-- Page content -->
+            <div class="block mb-2 p-4 text-gray-500 text-justify dark:text-gray-400">
+                {{ page.content }}
+
+                <!-- Display keyword badges - moved outside the <p> -->
+                <div class="flex flex-wrap gap-2 mt-5">
+                    <span *ngFor="let kw of page.keyword; let i = index"
+                        [ngStyle]="{'background-color': getBadgeBackgroundColor(i), 'color': getBadgeTextColor(i)}"
+                        class="px-2.5 py-0.5 rounded font-medium text-sm capitalize me-2">
+                        {{ kw }}
+                    </span>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+    </div>

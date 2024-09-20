@@ -1,0 +1,15 @@
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.container {
+    max-width: 1280px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.mt-auto {
+    margin-top: auto;
+}
